@@ -26,6 +26,12 @@ class _CoverScreenState extends State<CoverScreen>
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {},
