@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'widgets/image_page.dart';
 
 class ImageScreen extends StatelessWidget {
   @override
@@ -6,19 +8,16 @@ class ImageScreen extends StatelessWidget {
     return Container(
       height: 200,
       width: 200,
-      color: const Color(0xFFFFFFFF),
-      child: ClipPath(
-        clipper: RightCornerClipper(),
-        child: Container(
-          height: 200,
-          width: 200,
-          decoration: BoxDecoration(
-            image: DecorationImage(
+      child: kIsWeb ? Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
               image: AssetImage('assets/image.jpg'),
               fit: BoxFit.cover
-            ),
           ),
         ),
+      ): ClipPath(
+        clipper: RightCornerClipper(),
+        child: ImagePage()
       ),
     );
   }

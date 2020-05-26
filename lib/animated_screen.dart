@@ -4,13 +4,16 @@ import 'cover_screen.dart';
 import 'image_screen.dart';
 
 class AnimatedScreen extends StatefulWidget {
+  final AnimationController controller;
+
+  AnimatedScreen({this.controller});
+
   @override
   _AnimatedScreenState createState() => _AnimatedScreenState();
 }
 
 class _AnimatedScreenState extends State<AnimatedScreen>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
   Animation _animation;
   Widget visibleScreen = Container();
 
@@ -25,11 +28,7 @@ class _AnimatedScreenState extends State<AnimatedScreen>
 
   @override
   void initState() {
-    _controller = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 500),
-    );
-    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller)
+    _animation = Tween(begin: 0.0, end: 1.0).animate(widget.controller)
       ..addListener(() {
         setState(() {});
       });
@@ -38,24 +37,15 @@ class _AnimatedScreenState extends State<AnimatedScreen>
 
   @override
   void dispose() {
-    _controller.dispose();
+    widget.controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        if(_controller.status == AnimationStatus.dismissed) {
-          _controller.forward();
-        } else {
-          _controller.reverse();
-        }
-      },
-      child: Transform(
-        transform: Matrix4.rotationY(pi * _animation.value),
-        child: getScreen(),
-      ),
+    return Transform(
+      transform: Matrix4.rotationY(pi * _animation.value),
+      child: getScreen(),
     );
   }
 }
