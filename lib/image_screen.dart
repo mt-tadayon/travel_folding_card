@@ -8,6 +8,16 @@ class ImageScreen extends StatelessWidget {
     return Container(
       height: 200,
       width: 200,
+      decoration: BoxDecoration(
+        color: const Color(0xFFFFFFFF),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0, 3),
+            blurRadius: 2.5,
+          )
+        ]
+      ),
       child: kIsWeb ? Container(
         decoration: BoxDecoration(
           image: DecorationImage(

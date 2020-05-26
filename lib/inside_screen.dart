@@ -9,7 +9,16 @@ class InsideScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       height: 200,
       width: 200,
-      color: Color(0xfffafbfa),
+      decoration: BoxDecoration(
+        color: Color(0xfffafbfa),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0, 3),
+            blurRadius: 2.5,
+          ),
+        ],
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
