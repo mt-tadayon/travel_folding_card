@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterchallenge02/widgets/animated_button.dart';
+
+import 'widgets/animated_button.dart';
 
 class InsideScreen extends StatelessWidget {
   @override

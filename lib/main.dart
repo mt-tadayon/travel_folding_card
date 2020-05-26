@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterchallenge02/cover_screen.dart';
+import 'package:flutterchallenge02/animated_screen.dart';
 import 'package:flutterchallenge02/inside_screen.dart';
 
 void main() => runApp(MyApp());
@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
           alignment: Alignment.center,
           children: <Widget>[
             InsideScreen(),
-            CoverScreen()
+            AnimatedScreen()
           ],
         ),
       ),
