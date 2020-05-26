@@ -59,7 +59,13 @@ class _AnimatedButtonState extends State<AnimatedButton>
                 }
               },
               onTap: () {
-                print('Hello');
+                if(controller.status == AnimationStatus.dismissed) {
+                  controller.forward();
+                  textColor = Colors.white;
+                } else {
+                  controller.reverse();
+                  textColor = widget.color;
+                }
               },
               child: Stack(
                 children: <Widget>[
@@ -68,7 +74,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
                       height: animation.value,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.pink,
+                        color: widget.color,
                       ),
                     ),
                   ),
