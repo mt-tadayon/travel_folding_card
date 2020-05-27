@@ -4,6 +4,8 @@ class CoverScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 200,
+      width: 200,
       decoration: BoxDecoration(
         color: const Color(0xffff62b2),
         boxShadow: [
@@ -17,19 +19,17 @@ class CoverScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Container(
             height: 150,
             width: 200,
-            decoration: BoxDecoration(color: const Color(0xffff62b2)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
-                  Icons.build,
+                  Icons.location_city,
                   color: Colors.white,
-                  size: 20.0,
+                  size: 32.0,
                 ),
                 Text(
                   'City break',

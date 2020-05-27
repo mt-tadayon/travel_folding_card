@@ -19,11 +19,8 @@ class ImageScreen extends StatelessWidget {
         ]
       ),
       child: kIsWeb ? Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/image.jpg'),
-              fit: BoxFit.cover
-          ),
+        child: Image(
+          image: NetworkImage('https://i.picsum.photos/id/679/200/200.jpg'),
         ),
       ): ClipPath(
         clipper: RightCornerClipper(),
