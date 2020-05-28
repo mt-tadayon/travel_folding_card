@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterchallenge02/constant.dart';
 import 'widgets/image_page.dart';
 
 class ImageScreen extends StatelessWidget {
@@ -8,16 +9,7 @@ class ImageScreen extends StatelessWidget {
     return Container(
       height: 200,
       width: 200,
-      decoration: BoxDecoration(
-        color: const Color(0xFFFFFFFF),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0, 3),
-            blurRadius: 2.5,
-          )
-        ]
-      ),
+      decoration: containerDecoration,
       child: kIsWeb ? Container(
         child: Image(
           image: NetworkImage('https://i.picsum.photos/id/679/200/200.jpg'),

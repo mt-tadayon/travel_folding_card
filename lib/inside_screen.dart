@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterchallenge02/constant.dart';
 import 'widgets/animated_button.dart';
 
 class InsideScreen extends StatelessWidget {
@@ -8,16 +9,7 @@ class InsideScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       height: 200,
       width: 200,
-      decoration: BoxDecoration(
-        color: Color(0xfffafbfa),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0, 3),
-            blurRadius: 2.5,
-          ),
-        ],
-      ),
+      decoration: containerDecoration,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,

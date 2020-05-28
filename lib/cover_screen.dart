@@ -1,21 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutterchallenge02/constant.dart';
 
 class CoverScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 200,
-      decoration: BoxDecoration(
-        color: const Color(0xffff62b2),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0, 3),
-            blurRadius: 2.5,
-          ),
-        ],
-      ),
+      decoration: containerDecoration,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +32,7 @@ class CoverScreen extends StatelessWidget {
                   'From €29',
                   style: TextStyle(
                     fontSize: 16.0,
-                    color: Colors.white,
+                    color: const Color(0xffffffff),
                   ),
                 )
               ],
@@ -51,7 +41,7 @@ class CoverScreen extends StatelessWidget {
           ClipPath(
             clipper: TriangleClipper(),
             child: Container(
-              color: Colors.white,
+              color: const Color(0xffffffff),
               height: 50,
               width: 200,
               child: Center(
