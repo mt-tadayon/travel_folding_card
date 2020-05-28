@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutterchallenge02/constant.dart';
 
 class CoverScreen extends StatelessWidget {
+  final String tripTitle;
+  final String tripPrice;
+
+  CoverScreen({this.tripTitle, this.tripPrice});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: containerDecoration,
+      decoration: containerDecoration.copyWith(
+        color: const Color(0xffff62b2),
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -22,14 +29,14 @@ class CoverScreen extends StatelessWidget {
                   size: 32.0,
                 ),
                 Text(
-                  'City break',
+                  tripTitle,
                   style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
                 Text(
-                  'From €29',
+                  tripPrice,
                   style: TextStyle(
                     fontSize: 16.0,
                     color: const Color(0xffffffff),

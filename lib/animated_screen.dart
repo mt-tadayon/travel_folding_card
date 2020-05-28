@@ -19,7 +19,10 @@ class _AnimatedScreenState extends State<AnimatedScreen>
 
   Widget getScreen() {
     if (_animation.value < 0.5) {
-      visibleScreen = CoverScreen();
+      visibleScreen = CoverScreen(
+        tripTitle: 'City Break',
+        tripPrice: 'From 29€',
+      );
     } else {
       visibleScreen = ImageScreen();
     }
