@@ -3,6 +3,11 @@ import 'package:flutterchallenge02/constant.dart';
 import 'widgets/animated_button.dart';
 
 class InsideScreen extends StatelessWidget {
+  final String title;
+  final String information;
+
+  InsideScreen({this.title, this.information});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +19,7 @@ class InsideScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text('For urban lovers',
+          Text(title,
               style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -23,7 +28,7 @@ class InsideScreen extends StatelessWidget {
             height: 10.0,
           ),
           Text(
-              'As cities never sleep, there are always something going on, no matter what time!',
+              information,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14.0,

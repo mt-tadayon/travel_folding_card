@@ -61,7 +61,11 @@ class _MyHomePageState extends State<MyHomePage>
             child: Stack(
               alignment: Alignment.center,
               children: <Widget>[
-                InsideScreen(),
+                InsideScreen(
+                  title: 'For urban lovers',
+                  information:
+                      'As cities never sleep, there are always something going on, no matter what time!',
+                ),
                 AnimatedScreen(controller: _controller),
               ],
             ),
