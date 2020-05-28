@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterchallenge02/constant.dart';
-import 'widgets/image_page.dart';
 
 class ImageScreen extends StatelessWidget {
   @override
@@ -16,7 +15,10 @@ class ImageScreen extends StatelessWidget {
         ),
       ): ClipPath(
         clipper: RightCornerClipper(),
-        child: ImagePage()
+        child: Image(
+          image: AssetImage('assets/image.jpg'),
+          fit: BoxFit.cover,
+        )
       ),
     );
   }
