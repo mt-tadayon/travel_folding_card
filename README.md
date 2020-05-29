@@ -1,6 +1,8 @@
-# flutterchallenge02
+# travelfoldingcard
 
-A new Flutter application.
+Travel Folding Card with hover animation
+- [The live version is in my Flutter CodePen](https://codepen.io/mt-tadayon/pen/xxwzwBO)
+- [The original CodePen is from Madalena, which is created with HTML, CSS and JS](https://codepen.io/Madalena-Design/pen/KKdmyGb)
 
 ## Getting Started
 

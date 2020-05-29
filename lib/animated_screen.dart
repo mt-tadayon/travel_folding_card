@@ -12,8 +12,7 @@ class AnimatedScreen extends StatefulWidget {
   _AnimatedScreenState createState() => _AnimatedScreenState();
 }
 
-class _AnimatedScreenState extends State<AnimatedScreen>
-    with SingleTickerProviderStateMixin {
+class _AnimatedScreenState extends State<AnimatedScreen> {
   Animation _animation;
   Widget visibleScreen = Container();
 
