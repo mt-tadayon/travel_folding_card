@@ -28,6 +28,12 @@ class _TripCardState extends State<TripCard>
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: InkWell(
